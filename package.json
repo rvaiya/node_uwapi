@@ -1,0 +1,24 @@
+{
+  "name": "uwapi",
+  "version": "1.0.0",
+  "description": "Promise based library for accessing the UW Open Data API",
+  "main": "lib/uwapi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "UW",
+    "api",
+    "opendata",
+    "uwapi"
+  ],
+  "repository" : { 
+      "type" : "git"
+      "url" : "https://github.com/rvaiya/node_uwapi"
+  },
+  "author": "Raheman Vaiya",
+  "license": "GPL",
+  "dependencies": {
+    "q": "^1.0.1"
+  }
+}
