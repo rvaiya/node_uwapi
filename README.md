@@ -35,7 +35,7 @@ which should automatically be installed by npm.
 Each endpoint is implemented as a function that returns a promise which resolves
 to the data payload obtained by the querying the endpoint with the provided
 parameters. Each endpoint path corresponds to a specific function as found in
-the [FUNCTIONS.md] file. Parameters are expected to be passed in to these
+the REFERENCE.md file. Parameters are expected to be passed in to these
 functions as an object where the key corresponds to the parameter name.
 
 ## Example
