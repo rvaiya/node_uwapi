@@ -1,6 +1,6 @@
 {
   "name": "uwapi",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Promise based library for accessing the UW Open Data API",
   "main": "lib/uwapi.js",
   "scripts": {
