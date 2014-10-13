@@ -7,7 +7,8 @@ sets of parameters but all valid calls must include exactly the parameters in
 the given list (e.g the foodservicesMenu function must either consume no options
 or be provided with both the year and week). The output of each function is what
 is expected to be returned by the relevant endpoint (this is documented on the
-UW api
+UW api. GET parameters can optionally be passed in as a second argument, see the
+code in [README.md](README.md)
 
 ## Example
 
@@ -60,6 +61,10 @@ year, week
 <tr><td>/foodservices/products/{product_id}</td>
 <td>foodservices</td><td>
 product_id
+</td></tr>
+<tr><td>/foodservices/products/search</td>
+<td>foodservicesSearch</td><td>
+None
 </td></tr>
 <tr><td>/courses/{subject}</td>
 <td>courses</td><td>
@@ -155,6 +160,10 @@ None
 </td></tr>
 <tr><td>/resources/goosewatch</td>
 <td>resourcesGoosewatch</td><td>
+None
+</td></tr>
+<tr><td>/resources/sites</td>
+<td>resourcesSites</td><td>
 None
 </td></tr>
 <tr><td>/codes/units</td>

@@ -6,14 +6,14 @@ while still remaining efficient.
 
 ## Installation
 
-Simply run 
+Simply run
 
 ```
 npm install uwapi
 ```
 
 in the target project. The value returned
-by require('uwapi') is a constructor that 
+by require('uwapi') is a constructor that
 consumes an api token and returns an object
 with methods for making queries.
 
@@ -35,13 +35,17 @@ which should automatically be installed by npm.
 Each endpoint is implemented as a function that returns a promise which resolves
 to the data payload obtained by the querying the endpoint with the provided
 parameters. Each endpoint path corresponds to a specific function as found in
-the REFERENCE.md file. Parameters are expected to be passed in to these
+the [REFERENCE.md](REFERENCE.md) file. Parameters are expected to be passed in to these
 functions as an object where the key corresponds to the parameter name.
+GET parameters can optionally be passed as a second argument.
 
 ## Example
 
 ```javascript
-uwapi.buildingsList({}).then(function(buildings) {
+
+//A 'normal' endpoint (the bulk of them)
+
+uwapi.buildingsList().then(function(buildings) {
 	for(var building in buildings) {
 		// Do something here
 	}
@@ -51,7 +55,18 @@ uwapi.buildingsList({}).then(function(buildings) {
 }, function(err) {
 	// Handle errors
 });
+
+
+//Endpoints which take GET parameters.
+
+uwapi.foodservicesSearch({}, {'calories.lt': 600}).then(console.log, console.error);
+uwapi.poorlyDesignedEndpoint({embededParam1: embededVal}, {getParam1: getVal}).then(console.log, console.error);
+
 ```
+
+## Tests
+
+Set the environment variable uwApiToken and run 'npm test'
 
 ## Bugs / Feature Requests
 

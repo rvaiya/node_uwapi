@@ -1,10 +1,10 @@
 {
   "name": "uwapi",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "description": "Promise based library for accessing the UW Open Data API",
   "main": "lib/uwapi.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "test -z $uwApiToken && echo \"uwApiToken environment variable must be set to a valid token to run tests\" || mocha"
   },
   "keywords": [
     "UW",
@@ -12,13 +12,16 @@
     "opendata",
     "uwapi"
   ],
-  "repository" : { 
-      "type" : "git",
-      "url" : "https://github.com/rvaiya/node_uwapi"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rvaiya/node_uwapi"
   },
   "author": "Raheman Vaiya",
   "license": "GPL",
   "dependencies": {
     "q": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^1.21.5"
   }
 }
