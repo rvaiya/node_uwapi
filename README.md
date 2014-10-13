@@ -68,6 +68,28 @@ uwapi.poorlyDesignedEndpoint({embededParam1: embededVal}, {getParam1: getVal}).t
 
 Set the environment variable uwApiToken and run 'npm test'
 
+## Changelog
+
+
+###v1.1.1
+
+ - Updated baseURL to use secured endpoints
+
+###v1.1.0
+
+ - Added optional support for GET parameters (see [README.md](README.md))
+ - Added the foodservicesSearch endpoint
+ - Added the resourcesSites endpoint
+
+###1.0.4
+
+ - Allow empty responses to propagate rather than throwing an error
+
+###v1.0.3
+
+ - Make function names more consistent with endpoints
+
+
 ## Bugs / Feature Requests
 
 Please email any bugs or feature requests to rvaiya@uwaterloo.ca
